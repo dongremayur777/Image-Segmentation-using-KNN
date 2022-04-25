@@ -20,6 +20,61 @@ K-NN is a non-parametric algorithm, which means it does not make any assumption 
 It is also called a lazy learner algorithm because it does not learn from the training set immediately instead it stores the dataset and at the time of classification, it performs an action on the dataset.
 KNN algorithm at the training phase just stores the dataset and when it gets new data, then it classifies that data into a category that is much similar to the new data.
 
+## Our Proposed Work - 
+
+In this poster, we proposed to implement a common and widely used image process- ing technique of Image Segementation using KNN Algorithm. As discussed 
+
+above, here we initially define a K value which is the min no. of neighbours to be considered. The no. of K values must be odd to avoid ties. The K value 
+
+for this poster is chosen to be 40, hence 40 neighbours will be considered before assigning the new pixel a cluster. A step by step walk around of the 
+
+implemtation is:
+
+The Number Program initially asks for the number of clusters to be selected in the K-NN algorithm. Obviously more the clusters more the number of 
+
+segmented parts in the image.
+
+
+So the steps Involved in K-NN algorithm:
+
+Choosing the number of Clusters
+
+Selecting at random K points for centroid, in our case 40 was passed as the number of neighbors.
+
+Assigning each Data point as we say each pixel value closest to the above centroid that further gives us clusters.
+
+Now we compute and place the new centroid for each cluster.
+
+On the last step we just do the reassignment of the new nearest centroid and if in any case any new reassignment took place we would reiterate the above 
+process.
+
+
+## Pseudo Code - 
+
+So the steps Involved in K-NN algorithm:
+
+1. Import necessary libraries (eg. numpy, scikit, matplotlib)
+
+2. Read and reshape the image
+
+3. Choosing the number of Clusters
+
+4. Selecting at random K points for centroid, in our case 40 was passed as the number of neighbors.
+
+5. Assigning each Data point as we say each pixel value closest to the above centroid that further gives us clusters.
+
+6. Now we compute and place the new centroid for each cluster.
+
+7. On the last step we just do the reassignment of the new nearest centroid and if in
+
+any case any new reassignment took place we would reiterate the above process.
+
+All this procedure is condensed under one function in Sci-kit and hence making it easy to use
+
+## Flowchart -
+
+![Flowchart](https://user-images.githubusercontent.com/59500283/165037996-99e65cce-7edb-4d9e-b102-a9df2d50b983.jpg)
+
 
 ## Code - 
 
@@ -115,3 +170,17 @@ cv2.waitKey(0)
 
 cv2.destroyAllWindows()
 
+## Outputs -
+
+![Img_1](https://user-images.githubusercontent.com/59500283/165038063-080c6a79-032b-4770-936d-8e386a89ce7e.jpeg)
+
+![Img_2](https://user-images.githubusercontent.com/59500283/165038104-eb7715ed-19cb-4fbd-b6fd-5e129a37db61.jpeg)
+
+![Img_3](https://user-images.githubusercontent.com/59500283/165038114-10e170f4-eb1d-4a07-b889-944e5a9e4e78.jpeg)
+
+![Img_4](https://user-images.githubusercontent.com/59500283/165038129-8fb3c91a-0a6c-45df-9ffe-2e453c7a5200.jpeg)
+
+
+## Results - 
+
+This paper implements image segmentation for more comprehensive grouping and understanding of images and getting a more clearly distinct ROI. We applied image segmentation by the means of KNN on 2 images, one being a casual image and the other being an MRI scan. in both images we can see a significant form of clustering of regions of image which resume characteristics. For the normal image, the num- ber of clusters is selected to be 10 and for the MRI scan the number of sclusters is
